@@ -4,7 +4,7 @@ const passport = require('passport');
 const config = require('./config');
 
 //connect to the database and load models
-require('./server/models').connect(config.dbUri);
+//require('./server/models').connect(config.dbUri);
 
 const app = express();
 //tell the app to look for static files in these directories
@@ -22,8 +22,8 @@ passport.use('local-signup', localSignupStrategy);
 passport.use('local-login', localLoginStrategy);
 
 //pass the authentication checker middleware
-const authCheckMiddleware = require('./server/middleware/auth-check');
-app.use('/api', authCheckMiddleware);
+//const authCheckMiddleware = require('./server/middleware/auth-check');
+//app.use('/api', authCheckMiddleware);
 
 //routes
 const authRoutes = require('./server/routes/auth.js');

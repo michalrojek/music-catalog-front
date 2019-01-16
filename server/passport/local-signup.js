@@ -1,10 +1,10 @@
-const User = require('mongoose').model('User');
+/*const User = require('mongoose').model('User');
 const PassportLocalStrategy = require('passport-local').Strategy;
-
+*/
 /**
  * Return the Passport Local Strategy object.
  */
-module.exports = new PassportLocalStrategy({
+/*module.exports = new PassportLocalStrategy({
     usernameField: 'email',
     passwordField: 'password',
     session: false,
@@ -22,4 +22,4 @@ module.exports = new PassportLocalStrategy({
 
         return done(null);
     });
-});
+});*/

@@ -5150,9 +5150,6 @@ var Auth = function () {
             localStorage.removeItem('token');
             localStorage.removeItem('isAdmin');
             localStorage.removeItem('isModerator');
-            setTimeout(function () {
-                return window.location.reload(false);
-            }, 100);
         }
 
         /**
@@ -41556,6 +41553,85 @@ var Base = function Base() {
                     'Katalog muzyczny'
                 )
             ),
+            _react2.default.createElement(
+                'div',
+                { className: 'top-bar-right' },
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: '/albums' },
+                    'Albumy'
+                ),
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: '/artists' },
+                    'Arty\u015Bci'
+                ),
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: '/bands' },
+                    'Zespo\u0142y'
+                ),
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: '/lists' },
+                    'Listy'
+                ),
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: '/addlist' },
+                    'Dodaj list\u0119'
+                ),
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: '/mylists' },
+                    'Moje listy'
+                ),
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: '/addalbum' },
+                    'Dodaj album'
+                ),
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: '/addartist' },
+                    'Dodaj artyst\u0119'
+                ),
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: '/addband' },
+                    'Dodaj zesp\xF3\u0142'
+                ),
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: '/addgenre' },
+                    'Dodaj gatunek'
+                ),
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: '/addedition' },
+                    'Dodaj wydanie'
+                ),
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: '/addalbumtype' },
+                    'Dodaj typ albumu'
+                ),
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: '/users' },
+                    'U\u017Cytkownicy'
+                ),
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: '/login' },
+                    'Zaloguj si\u0119'
+                ),
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: '/signup' },
+                    'Zarejestruj si\u0119'
+                )
+            ),
             _Auth2.default.isUserAuthenticated() && _Auth2.default.isUserAdmin() ? _react2.default.createElement(
                 'div',
                 { className: 'top-bar-right' },
@@ -41735,20 +41811,7 @@ var Base = function Base() {
                     { to: '/', onClick: _Auth2.default.deauthentiacteUser },
                     'Wyloguj si\u0119'
                 )
-            ) : _react2.default.createElement(
-                'div',
-                { className: 'top-bar-right' },
-                _react2.default.createElement(
-                    _reactRouterDom.Link,
-                    { to: '/login' },
-                    'Zaloguj si\u0119'
-                ),
-                _react2.default.createElement(
-                    _reactRouterDom.Link,
-                    { to: '/signup' },
-                    'Zarejestruj si\u0119'
-                )
-            )
+            ) : _react2.default.createElement('div', { className: 'top-bar-right' })
         )
     );
 };
@@ -41782,7 +41845,7 @@ var HomePage = function HomePage() {
     return _react2.default.createElement(
         _Card.Card,
         { className: 'container' },
-        _react2.default.createElement(_Card.CardTitle, { title: 'Katalog muzyczny', subtitle: 'Witaj w aplikacji zabieraj\u0105cej informacje muzyczne.' })
+        _react2.default.createElement(_Card.CardTitle, { title: 'Katalog muzyczny', subtitle: 'Witaj w aplikacji zbieraj\u0105cej informacje muzyczne.' })
     );
 };
 
@@ -60159,6 +60222,24 @@ _reactDom2.default.render(_react2.default.createElement(
                 ) : _react2.default.createElement(
                     'div',
                     null,
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/albums', component: _PaginationPage2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/albums/:id', component: _AlbumInfoPage2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/artists', component: _PaginationPage2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/artists/:id', component: _ArtistInfoPage2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/bands', component: _PaginationPage2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/bands/:id', component: _BandInfoPage2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/lists', component: _PaginationPage2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/lists/:id', component: _ListInfoPage2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/addlist', component: _AddList2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/mylists', component: _UserLists2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/mylists/id/:id', component: _EditUserList2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/addalbum', component: _AddAlbum2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/addartist', component: _AddArtist2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/addband', component: _AddBand2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/addgenre', component: _AddGenre2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/addedition', component: _AddEdition2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/addalbumtype', component: _AddAlbumType2.default }),
+                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/users', component: _EditModeratorList2.default }),
                     _react2.default.createElement(_reactRouterDom.Route, { path: '/login', component: _LoginPage2.default }),
                     _react2.default.createElement(_reactRouterDom.Route, { path: '/signup', component: _SignUpPage2.default })
                 )

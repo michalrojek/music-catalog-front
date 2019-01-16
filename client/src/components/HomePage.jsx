@@ -3,7 +3,7 @@ import { Card, CardTitle } from 'material-ui/Card';
 
 const HomePage = () => (
     <Card className="container">
-        <CardTitle title="Katalog muzyczny" subtitle="Witaj w aplikacji zabierającej informacje muzyczne." />
+        <CardTitle title="Katalog muzyczny" subtitle="Witaj w aplikacji zbierającej informacje muzyczne." />
     </Card>
 );
 

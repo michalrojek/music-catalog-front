@@ -9,7 +9,23 @@ const Base = () => (
             <div className="top-bar-left">
                 <NavLink to="/">Katalog muzyczny</NavLink>
             </div>
-
+            <div className="top-bar-right">
+                    <Link to="/albums">Albumy</Link>
+                    <Link to="/artists">Artyści</Link>
+                    <Link to="/bands">Zespoły</Link>
+                    <Link to="/lists">Listy</Link>
+                    <Link to="/addlist">Dodaj listę</Link>
+                    <Link to="/mylists">Moje listy</Link>
+                    <Link to="/addalbum">Dodaj album</Link>
+                    <Link to="/addartist">Dodaj artystę</Link>
+                    <Link to="/addband">Dodaj zespół</Link>
+                    <Link to="/addgenre">Dodaj gatunek</Link>
+                    <Link to="/addedition">Dodaj wydanie</Link>
+                    <Link to="/addalbumtype">Dodaj typ albumu</Link>
+                    <Link to="/users">Użytkownicy</Link>
+                    <Link to="/login">Zaloguj się</Link>
+                    <Link to="/signup">Zarejestruj się</Link>
+                </div>
             {Auth.isUserAuthenticated() && Auth.isUserAdmin() ? (
                 <div className="top-bar-right">
                     <Link to="/albums">Albumy</Link>
@@ -55,8 +71,6 @@ const Base = () => (
                         </div>
                     ) : (
                         <div className="top-bar-right">
-                            <Link to="/login">Zaloguj się</Link>
-                            <Link to="/signup">Zarejestruj się</Link>
                         </div>
                     )}
 

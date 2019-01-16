@@ -96,6 +96,24 @@ ReactDom.render((
                                 </div>
                             ) : (
                                 <div>
+                                    <Route exact path="/albums" component={PaginationPage} />
+                                    <Route exact path="/albums/:id" component={AlbumInfoPage} />
+                                    <Route exact path="/artists" component={PaginationPage} />
+                                    <Route exact path="/artists/:id" component={ArtistInfoPage} />
+                                    <Route exact path="/bands" component={PaginationPage} />
+                                    <Route exact path="/bands/:id" component={BandInfoPage} />
+                                    <Route exact path="/lists" component={PaginationPage} />
+                                    <Route exact path="/lists/:id" component={ListInfoPage} />
+                                    <Route exact path="/addlist" component={AddList} />
+                                    <Route exact path="/mylists" component={UserLists} />
+                                    <Route exact path="/mylists/id/:id" component={EditUserList} />
+                                    <Route exact path="/addalbum" component={AddAlbum} />
+                                    <Route exact path="/addartist" component={AddArtist} />
+                                    <Route exact path="/addband" component={AddBand} />
+                                    <Route exact path="/addgenre" component={AddGenre} />
+                                    <Route exact path="/addedition" component={AddEdition} />
+                                    <Route exact path="/addalbumtype" component={AddAlbumType} />
+                                    <Route exact path="/users" component={EditModeratorList} />
                                     <Route path="/login" component={LoginPage} />
                                     <Route path="/signup" component={SignUpPage} /> 
                                 </div>

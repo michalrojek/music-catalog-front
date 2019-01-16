@@ -1,12 +1,12 @@
-const jwt = require('jsonwebtoken');
+/*const jwt = require('jsonwebtoken');
 const User = require('mongoose').model('User');
 const PassportLocalStrategy = require('passport-local').Strategy;
-const config = require('../../config');
+const config = require('../../config');*/
 
 /**
  * Return the Passport Local Strategy object.
  */
-module.exports = new PassportLocalStrategy({
+/*module.exports = new PassportLocalStrategy({
     usernameField: 'email',
     passwordField: 'password',
     session: false,
@@ -52,4 +52,4 @@ module.exports = new PassportLocalStrategy({
             return done(null, token, data);
         });
     });
-});
+});*/
